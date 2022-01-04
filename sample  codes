@@ -1,0 +1,12 @@
+
+from tkinter import *
+from tracknumber import Tracknumber
+
+root = Tk()
+my_entry = Entry(root, textvariable = var)
+my_entry.pack()
+
+tracker = Tracknumber(widget = my_entry, kind = "tk")
+var.trace("w", tracker.isnumber)
+
+root.mainloop()
